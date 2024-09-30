@@ -1,4 +1,4 @@
-@extends('mylayout')
+@extends('layouts.app')
 @section('content')
     <div class="card mt-3">
         <div class="card-body">
@@ -9,6 +9,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Minuman</th>
+                        <th>Foto</th>
                         <th>Deskripsi</th>
                         <th>Harga</th>
                         <th>Stok</th>
@@ -20,9 +21,23 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->nama_minuman }}</td>
+                            <td><img src="{{ Storage::url($item->foto) }}" alt="Foto Minuman" width="50">
+                            </td>
                             <td>{{ $item->deskripsi }}</td>
                             <td>{{ $item->harga }}</td>
                             <td>{{ $item->stok }}</td>
+                            <td>
+                                <a href="/minuman/{{ $item->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                                <form action="/minuman/{{ $item->id }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Anda Yakin?')">
+                                        Hapus
+                                    </button>
+                                </form>
+
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
