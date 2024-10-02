@@ -9,13 +9,16 @@ Route::middleware(Authenticate::class)->group(function () {
     Route::resource('minuman', MinumanController::class);
 });
 
-
+Route::get('logout', function () {
+    Auth::logout();
+    return redirect('login');
+});
 
 // Route::get('minuman', [MinumanController::class, 'index']);
 Route::get('minuman/create', [MinumanController::class, 'create']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
 
 Route::get('profil', function () {

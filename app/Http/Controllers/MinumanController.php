@@ -13,6 +13,7 @@ class MinumanController extends Controller
      */
     public function index()
     {
+        //mengambil data
         $data['minuman'] = \App\Models\Minuman::latest()->paginate(10);
         return view('minuman_index', $data);
     }
@@ -34,8 +35,8 @@ class MinumanController extends Controller
         $request->validate([
             'nama_minuman' => 'required',
             'deskripsi' => 'required',
-            'stok' => 'required',
-            'harga' => 'required',
+            'stok' => 'required|numeric',
+            'harga' => 'required|numeric',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:5000',
         ]);
 
@@ -87,8 +88,8 @@ class MinumanController extends Controller
         $request->validate([
             'nama_minuman' => 'required',
             'deskripsi' => 'required',
-            'stok' => 'required',
-            'harga' => 'required',
+            'stok' => 'required|numeric',
+            'harga' => 'required|numeric',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5000', // nullable berarti tidak wajib upload foto baru
         ]);
 

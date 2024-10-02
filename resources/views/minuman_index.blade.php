@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_modern')
 @section('content')
     <div class="card mt-3">
         <div class="card-body">
@@ -27,17 +27,19 @@
                             <td>{{ $item->harga }}</td>
                             <td>{{ $item->stok }}</td>
                             <td>
-                                <a href="/minuman/{{ $item->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                <form action="/minuman/{{ $item->id }}" method="POST" class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-danger btn-sm"
-                                        onclick="return confirm('Anda Yakin?')">
-                                        Hapus
-                                    </button>
-                                </form>
-
+                                <div class="btn-group" role="group">
+                                    <a href="/minuman/{{ $item->id }}/edit" class="btn btn-warning me-2  btn-sm">Edit</a>
+                                    <form action="/minuman/{{ $item->id }}" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm"
+                                            onclick="return confirm('Anda Yakin?')">
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
+
                         </tr>
                     @endforeach
                 </tbody>

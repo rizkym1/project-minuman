@@ -1,0 +1,275 @@
+:root{
+    --mainColor: #252734;
+    --secondaryColor: #333646;
+    --acsentColor: rgb(206, 3, 3);
+}
+
+body{
+    background-color: var(--mainColor);
+    min-height: 100px;
+    font-family: 'ubuntu', sans-serif;
+}
+
+
+section h1{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* Navbar */
+.nav-brand.active{
+    color: #ffff !important;
+    font-weight: 700;
+}
+
+.nav-dark {
+    background-color: var(--secondaryColor);
+    z-index: 10;
+    transition: .6s;
+}
+
+.nav-link:hover {
+    background-color: var(--acsentColor);
+}
+/* End Navbar */
+
+/* Hero */
+.color-acsent{
+    color:var(--acsentColor)
+}
+
+#hero{
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 10%;
+}
+
+#hero h1{
+    font-size: 3rem;
+    padding-top: 50px;
+}
+
+#hero p{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+/* QTA */
+.btn-custom1{
+    background-color: var(--acsentColor);
+    text-align: center;
+    color: #fff;
+    min-width: 150px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-custom1:hover{
+    box-shadow: 0 0 5px rgb(206, 3, 3);
+}
+
+
+/* End Hero */
+
+/* About */
+hr{
+    width: 35%;
+    height: 5px;
+    color: var(--acsentColor);
+    margin: 0 auto;
+    opacity: 100%;
+}
+
+#about{
+    min-height: 300px;
+    width: 100%;
+    background-color: var(--secondaryColor);
+    color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+/* End About */
+
+/* produk */
+/* #produk{
+    min-height: 600px;
+    width: 100%;
+    color: #fff;
+}
+
+#produk img {
+    width: 12%;
+    margin: 10px;
+}
+
+#produk .card{
+    background-color: #414558;
+    height: 340px;
+}
+
+#produk .card:hover {
+    background-color: var(--acsentColor);
+} */
+
+.produk-content{
+    margin-top: 120px;
+}
+.card-produk .overlay {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.card-produk .overlay:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+
+
+}
+
+.produk-detail h5 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.produk-detail span {
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.produk-detail h6 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.produk-detail button {
+    width: 150px;
+    height: 45px;
+    background-color: var(--acsentColor);
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+/* End produk */
+
+/* Sertifikat */
+#sertifikat{
+    margin-top: -170px;
+    padding-top: 270px;
+    padding-bottom: 80px;
+    background-color: var(--secondaryColor);
+}
+
+#sertifikat p, a{
+    color: #fff !important;
+    text-decoration: none;
+}
+
+#sertifikat img{
+    width: 49%;
+    padding: 10px;
+}
+/* End Sertifikat */
+/* Portofolio */
+#portofolio .container{
+    padding: 80px 10px;
+}
+/* End Portofolio */
+
+#kontak {
+    /* background-image: url(../img/gadis.jpg); */
+    background-color: var(--secondaryColor);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 160px;
+}
+#kontak h3 {
+    width: 70%;
+    font-size: 40px;
+    color: #fff;
+}
+
+#kontak .overlay {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#kontak .container {
+    padding : 130px 0;
+}
+
+
+
+.card-contact {
+    height: 445px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 75px 48px;
+}
+
+.card-contact .form-control {
+    height: 75px ;
+    border-radius: 0;
+    background-color: #DADADA;
+}
+
+.card-contact .form-control:focus {
+    box-shadow: 0 0 3px var(--pr-color);
+}
+
+.card-contact label {
+    color: #656565;
+    font-size: 18px;
+}
+
+.button-kontak {
+    width: 100%;
+    height: 75px;
+    background-color: var(--acsentColor);
+    border: none;
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.kontak h6 {
+    color: #fff;
+
+}
+
+.kontak a {
+    color: #fff;
+    width: 355px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* login */
+.btn{
+    background-color: var(--acsentColor);
+    text-align: center;
+    color: #fff;
+    min-width: 150px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    background-color: var(--secondaryColor);
+}
+
+.card {
+    border-radius: 40px !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #login {
+    background-image: url(../img/gadis.jpg);
+    background-color: var(--mainColor);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
